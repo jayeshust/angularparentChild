@@ -9,21 +9,20 @@ import { serve } from '../junk/service'
 })
 export class AppComponent {
   employees: Iemployee[];
+  cars:any[];
+  message:string;
 
-message = "hello"
-  
   constructor(private _empservice: serve) {
-    
+
   }
 
 
-  async ngOnInit(){
-    console.log('jkh');
+  async ngOnInit() {
     this.employees = await this._empservice.getEmployee();
-    console.log('>>'+JSON.stringify(this.employees))
+    console.log('>>' + JSON.stringify(this.employees))
   }
 
-  rece($event){
-this.message = $event;
+  rece($event) {
+    this.cars = $event;
   }
 }

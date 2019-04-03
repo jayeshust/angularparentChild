@@ -8,16 +8,17 @@ import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 })
 export class ChildComponent  {
 
- // @Input () message : string;
+ @Input () employees : any;
 
-Message :string = 'hello child';
+Message :string = 'passed value to parant';
+cars = ["Saab", "Volvo", "BMW","BMW",'Saab'];
 @Output() msEvent = new EventEmitter();
 
   constructor() { }
 
-  send() {
+  ngAfterViewInit() {
 
-    this.msEvent.emit(this.Message);
+    this.msEvent.emit(this.cars);
   }
 
 }

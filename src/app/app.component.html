@@ -1,21 +1,25 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<h3> parant here.....</h3>
+<span style="color:red;">{{message}}</span><br/>
 <div style="text-align:center">
-  <table border="1px" width="100%" height="30%">
+  <table border="1px" >
     <tbody>
       <tr>
         <td>Name</td>
-        <td>Gender</td>
+        <!-- <td>Gender</td> -->
       </tr>
-      <tr *ngFor='let item of employees' style="color:white;">
+      <tr *ngFor='let item of cars | gend' style="color:black">
         <td>
+          {{item}}
+        </td>
+        <!-- <td>
           {{item.name | gend:item.gender}}
         </td>
         <td>
           {{item.gender}}
-        </td>
+        </td> -->
       </tr>
     </tbody>
   </table>
  </div>
- {{message}}
- <app-child (msEvent) = 'rece($event)' ></app-child>
+ <app-child (msEvent) = 'rece($event)' [employees] = 'employees'></app-child>
+

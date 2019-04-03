@@ -1,4 +1,21 @@
-<p>
-  child works!
-</p>
+
+<h4>------------------------------------------------------</h4>
+<h3> child here.....</h3>
+<table border="1px">
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Gender</td>
+    </tr>
+    <tr *ngFor='let item of employees' style="color:black">
+      <td>
+        <!-- {{item.name | gend:item.gender}} -->
+        {{item.name}}
+      </td>
+      <td>
+        {{item.gender}}
+      </td>
+    </tr>
+  </tbody>
+</table>
 <button (click) = 'send()' class="button">send</button>
