@@ -9,6 +9,8 @@ import { serve } from '../junk/service'
 })
 export class AppComponent {
   employees: Iemployee[];
+
+message = "hello"
   
   constructor(private _empservice: serve) {
     
@@ -19,5 +21,9 @@ export class AppComponent {
     console.log('jkh');
     this.employees = await this._empservice.getEmployee();
     console.log('>>'+JSON.stringify(this.employees))
+  }
+
+  rece($event){
+this.message = $event;
   }
 }
