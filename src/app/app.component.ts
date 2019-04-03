@@ -8,9 +8,9 @@ import { serve } from '../junk/service'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  employees: Iemployee[];
-  cars:any[];
-  message:string;
+  employees:any[];
+  cars: any[];
+  message: string;
 
   constructor(private _empservice: serve) {
 
@@ -18,11 +18,15 @@ export class AppComponent {
 
 
   async ngOnInit() {
-    this.employees = await this._empservice.getEmployee();
-    console.log('>>' + JSON.stringify(this.employees))
+   // this.employees = await this._empservice.getEmployee();
+    // console.log('>>' + JSON.stringify(this.employees))
+    this.employees = ["Saab", "Volvo", "BMW", "BMW", 'Saab'];
   }
 
   rece($event) {
     this.cars = $event;
+    console.log('<<' + this.cars)
   }
+
+  //  https://hackernoon.com/understanding-javascript-prototype-and-inheritance-d55a9a23bde2
 }

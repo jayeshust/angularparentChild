@@ -1,24 +1,23 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Message } from '@angular/compiler/src/i18n/i18n_ast';
-
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })
-export class ChildComponent  {
+export class ChildComponent {
 
- @Input () employees : any;
+  @Input() employees: any;
 
-Message :string = 'passed value to parant';
-cars = ["Saab", "Volvo", "BMW","BMW",'Saab'];
-@Output() msEvent = new EventEmitter();
+  Message: string = 'passed value to parant';
+  cars = ["Saab", "Volvo", "BMW", "BMW", 'Saab'];
+
+  @Output() msEvent = new EventEmitter();
 
   constructor() { }
 
-  ngAfterViewInit() {
-
+  send() {
     this.msEvent.emit(this.cars);
   }
 
+ 
 }
