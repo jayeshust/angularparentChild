@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <table border="1px" width="100%" height="30%">
+    <tbody>
+      <tr>
+        <td>Name</td>
+        <td>Gender</td>
+      </tr>
+      <tr *ngFor='let item of employees' style="color:white;">
+        <td>
+          {{item.name | gend:item.gender}}
+        </td>
+        <td>
+          {{item.gender}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+ </div>
