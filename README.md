@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.2.
 
-This project expalanis hoe data communication happens with parent & child component [@Input,@Output,@Viewchild] nad rendedr with custom pipe 
+This project explains hoe data communication happens with parent & child component [@Input,@Output,@Viewchild] nad rendedr with custom pipe 
 
 ## Development server
 
