@@ -7,9 +7,10 @@ import { serve } from '../junk/service';
 import { HttpClientModule } from '@angular/common/http';
 import { ChildComponent } from './child/child.component';
 
+
 @NgModule({
   declarations: [
-    AppComponent, pipe, ChildComponent
+    AppComponent, pipe, ChildComponent 
   ],
   imports: [
     BrowserModule, HttpClientModule

@@ -1,25 +1,10 @@
-<h3> parant here.....</h3>
-<span style="color:red;">{{message}}</span><br/>
-<div style="text-align:center">
-  <table border="1px" >
-    <tbody>
-      <tr>
-        <td>Name</td>
-        <!-- <td>Gender</td> -->
-      </tr>
-      <tr *ngFor='let item of cars | gend' style="color:black">
-        <td>
-          {{item}}
-        </td>
-        <!-- <td>
-          {{item.name | gend:item.gender}}
-        </td>
-        <td>
-          {{item.gender}}
-        </td> -->
-      </tr>
-    </tbody>
-  </table>
- </div>
-  <app-child (msEvent) = 'rece($event)' [employees] = 'employees' #childComp></app-child>
+<h3> parant component</h3>
+<ul>
+  <li *ngFor="let hero of cars | flitr ">
+    {{ hero }}
+  </li>
+</ul>
+<app-child (msEvent) = 'rece($event)' [employees] = 'employees' #childComp></app-child>
 
+ 
+  

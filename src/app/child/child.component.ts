@@ -5,70 +5,22 @@ import { Component, Input, Output, EventEmitter, ElementRef, ViewChild } from '@
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent {
-  @ViewChild('tableBody') tableBody: ElementRef;
-  @Input() employees: any;
 
-  Message: string = 'passed value to parant';
-  cars = ["saab", "volvo", "bMW", "bMW", 'saab','gygyg'];
+  @Input() employees: any;//recieve from parent
+  @Output() msEvent = new EventEmitter();//pass to parent
+  person: string;
 
-  @Output() msEvent = new EventEmitter();
-
+  cars = ["saab", "volvo", "bmw", "bmw", 'saab', 'camry'];
   constructor() { }
 
+  //method to pass data to parent @output
   send() {
     this.msEvent.emit(this.cars);
   }
 
-  // function animal(name){
-  //   this.name = name;
-  //   }
-    
-  //   animal.prototype.sleep = function(){
-  //   console.log(this.name+' zzz');
-  //   }
-    
-  //   function dog(name){
-  //   this.name = name;
-  //   }
-    
-  //   dog.prototype = Object.create(animal.prototype);
-    
-  //   dog.prototype.bark = function(){
-  //   console.log(this.name+ '...grrrr');
-  //   }
-    
-    
-  //   var d = new dog('raju');
-    
-    
-    
-  //   d.bark();
-  //   d.sleep();
-    
-  //   --------------------
-    
-    
-  //   class animal{
-  //   constructor(name){
-  //   this.name = name;
-  //   }
-    
-  //   sleep(){
-  //   console.log(this.name+' zzz');
-  //   }
-  //   }
-    
-  //   class dog extends animal{
-  //   constructor(name){
-  //   super(name);
-  //   }
-  //   bark(){
-  //   console.log(this.name+' grrrr');
-  //   }
-  //   }
-    
-  //   var d = new dog('raju');
-  //   d.bark();
-  //   d.sleep();
- 
+  run(who) {
+    this.person = who;
+  }
+
+
 }
